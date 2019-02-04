@@ -1,0 +1,19 @@
+{
+  "name": "react-for-ember-devs",
+  "version": "1.0.0",
+  "description": "React for Ember Developers",
+  "main": "deck.mdx",
+  "scripts": {
+    "start": "mdx-deck deck.mdx",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "React",
+    "Ember"
+  ],
+  "author": "Tom Wayson <tom@tomwayson.com> (https://tomwayson.com)",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "mdx-deck": "^1.8.2"
+  }
+}
