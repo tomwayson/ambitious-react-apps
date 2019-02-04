@@ -5,6 +5,11 @@ import { Appear } from 'mdx-deck'
 ---
 ## Philosophy
 ---
+### Ember
+
+Convention > Configuration
+
+---
 ### React
 ```js
 ui = f(s)
@@ -16,9 +21,48 @@ ui = f(s)
 </Appear>
 </ul>
 ---
+## Architecture
+---
 ### Ember
 
-Convention > Configuration
+Route-centric
+---
+```
+datasets
+├── dataset
+│   ├── data
+│   │   ├── controller.js
+│   │   ├── route.js
+│   │   └── template.hbs
+│   ├── overview
+│   │   ├── controller.js
+│   │   ├── route.js
+│   │   └── template.hbs
+│   ├── controller.js
+│   ├── route.js
+│   └── template.hbs
+├── index
+│   ├── controller.js
+│   ├── route.js
+│   └── template.hbs
+├── index-loading
+│   └── template.hbs
+├── controller.js
+└── template.hbs
+```
+---
+### React
 
+Component-centric
+---
+Ember|React
+--|--
+Router|Component
+Route|Component
+Controller|Component
+Template|Component
+Service|Redux or Context
+Util|ES Module
+Initializer|index.js
 ---
 # The end
