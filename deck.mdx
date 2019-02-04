@@ -21,6 +21,52 @@ ui = f(s)
 </Appear>
 </ul>
 ---
+## Tooling
+---
+### Ember CLI
+```bash
+ember new my-new-app
+cd my-new-app
+ember test
+ember serve
+ember generate route items
+```
+---
+### React
+
+[create-react-app](https://github.com/facebook/create-react-app) - [Next.js](https://nextjs.org/) - [Gatsby](https://www.gatsbyjs.org/)
+---
+
+Like Ember CLI, each:
+<ol>
+  <Appear>
+  <li>installs dependencies & tooling</li>
+  <li>insulates devs from low-level tooling</li>
+  <li>has (a few) opinions on folder structure</li>
+  <li>has commands to run & build app</li>
+  </Appear>
+</ol>
+
+```notes
+no sub commands for generating routes, components, etc
+```
+---
+Emphasize docs/examples for:
+<ul>
+  <Appear>
+    <li>Styling components (CSS in JS, Sass, etc)</li>
+    <li>Installing & using libraries</li>
+    <li>Running tests</li>
+    <li>Deployment</li>
+  </Appear>
+</ul>
+---
+&nbsp;|create-react-app|Next.js|Gatsby
+--|--|--|--
+Best Uses|simple apps, learning React|data-centric apps|content-centric apps
+Key Feature|official support/docs|SSR, route-based data fetching & code-splitting|static site generation, ecosystem
+Owner|Facebook|Zeit (Now)|Gatsby.com
+---
 ## Architecture
 ---
 ### Ember
@@ -61,6 +107,7 @@ Router|Component
 Route|Component
 Controller|Component
 Template|Component
+Ember Data|GraphQL
 Service|Redux or Context
 Util|ES Module
 Initializer|index.js
