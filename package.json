@@ -5,6 +5,8 @@
   "main": "deck.mdx",
   "scripts": {
     "start": "mdx-deck deck.mdx",
+    "build": "mdx-deck build deck.mdx",
+    "export": "mdx-deck pdf --out-file=react-for-ember-devs.pdf deck.mdx",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
