@@ -5,12 +5,63 @@ import vsDark from "prism-react-renderer/themes/vsDark"
 
 # React for Ember Developers
 ---
+## Why should you care about React?
+---
+### At Esri
+Product|Framework
+--|--
+Hub|Ember
+Ops Dashboard|Ember
+Experience Builder|React
+Story Maps|React
+Insights|Angular
+Survey 123|Angular?
+---
+<a href="https://zendev.com/2018/06/19/react-usage-beating-vue-angular.html"><img src="./vue-react-tweet.png" width="500" /></a>
+---
+<a href="https://npm-stat.com/charts.html?package=react&package=vue&package=%40angular%2Fcore&package=ember-source&from=2016-06-01&to=2018-05-31"><img src="./downloads-per-month.png" /></a>
+---
+## Rebuilt an Ember App
+
+<a href="http://ambitious-arcgis-app-my1-something-unique.surge.sh/"><img width="852" src="./ambitous-arcgis-app-screenhot.png" /></a>
+
+[ambitious-arcgis-app-2018](https://github.com/mjuniper/ambitious-arcgis-app-2018/)
+---
+## React vs Ember
+---
+
+<table>
+  <tr>
+    <td>
+      <ul style={{listStyleType: 'none'}}>
+        <Appear>
+          <li>Flexible</li>
+          <li>Innovative</li>
+          <li>"View layer"</li>
+        </Appear>
+      </ul>
+    </td>
+    <td><img src="./Framework Spectrum.png" /></td>
+    <td>
+      <ul style={{listStyleType: 'none'}}>
+        <Appear>
+          <li>Opinionated</li>
+          <li>Stable</li>
+          <li>Heavy</li>
+        </Appear>
+      </ul>
+    </td>
+  </tr>
+</table>
+---
 ## Philosophy
 ---
 ### Ember
 
-Convention > Configuration
-
+<Appear>
+<p>Stability without Stagnation</p>
+<p>Convention > Configuration</p>
+</Appear>
 ---
 ### React
 ```js
@@ -22,6 +73,68 @@ ui = f(s)
   <li>User interactions?</li>
 </Appear>
 </ul>
+---
+## Tooling
+---
+### Ember CLI
+```bash
+ember new my-new-app
+cd my-new-app
+ember test
+ember serve
+ember generate route items
+```
+---
+### React
+
+[create-react-app](https://github.com/facebook/create-react-app) - [Next.js](https://nextjs.org/) - [Gatsby](https://www.gatsbyjs.org/)
+---
+
+Like Ember CLI, each:
+<ol>
+  <Appear>
+  <li>installs dependencies & tooling</li>
+  <li>insulates devs from low-level tooling</li>
+  <li>has (a few) opinions on folder structure</li>
+  <li>has commands to run & build app</li>
+  </Appear>
+</ol>
+
+```notes
+no sub commands for generating routes, components, etc
+```
+---
+Emphasize docs/examples for the rest:
+<ul>
+  <li>Styling components (CSS in JS, Sass, etc)</li>
+  <li>Installing & using libraries</li>
+  <li>Running tests</li>
+  <li>Deployment</li>
+</ul>
+---
+&nbsp;|create-react-app|Next.js|Gatsby
+--|--|--|--
+Key Feature|official support/docs|SSR, route-based data fetching & code-splitting|static site generation, ecosystem
+Best Uses|simple apps, learning React|data-centric apps|content-centric apps
+Owner|Facebook|Zeit (Now)|Gatsby.com
+---
+### Which did I choose?
+<Appear>
+<p>create-react-app</p>
+<p>... and Next.js</p>
+</Appear>
+---
+## Create ArcGIS App
+
+<a href="https://create-arcgis-app.surge.sh/"><img width="852" src="./create-arcgis-app-screenshot.png" /></a>
+
+[create-arcgis-app](https://github.com/tomwayson/create-arcgis-app)
+---
+## Next ArcGIS App
+
+<a href="https://next-arcgis-app.now.sh/"><img width="680" src="./next-arcgis-app-screenshot.png" /></a>
+
+[next-arcgis-app](https://github.com/tomwayson/next-arcgis-app)
 ---
 ## Architecture
 ---
@@ -69,52 +182,6 @@ Ember Data|GraphQL
 Service|Redux or Context
 Util|ES Module
 Initializer|index.js
----
-## Tooling
----
-### Ember CLI
-```bash
-ember new my-new-app
-cd my-new-app
-ember test
-ember serve
-ember generate route items
-```
----
-### React
-
-[create-react-app](https://github.com/facebook/create-react-app) - [Next.js](https://nextjs.org/) - [Gatsby](https://www.gatsbyjs.org/)
----
-
-Like Ember CLI, each:
-<ol>
-  <Appear>
-  <li>installs dependencies & tooling</li>
-  <li>insulates devs from low-level tooling</li>
-  <li>has (a few) opinions on folder structure</li>
-  <li>has commands to run & build app</li>
-  </Appear>
-</ol>
-
-```notes
-no sub commands for generating routes, components, etc
-```
----
-Emphasize docs/examples for:
-<ul>
-  <Appear>
-    <li>Styling components (CSS in JS, Sass, etc)</li>
-    <li>Installing & using libraries</li>
-    <li>Running tests</li>
-    <li>Deployment</li>
-  </Appear>
-</ul>
----
-&nbsp;|create-react-app|Next.js|Gatsby
---|--|--|--
-Key Feature|official support/docs|SSR, route-based data fetching & code-splitting|static site generation, ecosystem
-Best Uses|simple apps, learning React|data-centric apps|content-centric apps
-Owner|Facebook|Zeit (Now)|Gatsby.com
 ---
 ## Templates vs JSX
 ---
