@@ -251,6 +251,18 @@ npm install --save some-package
 ---
 ## Components
 ---
+### Lifecycles
+
+[Ember](https://guides.emberjs.com/release/components/the-component-lifecycle/)|[React](https://reactjs.org/docs/react-component.html#the-component-lifecycle)
+--|--
+`init()`|`constructor()`
+`didReceiveAttrs()`|`getDerivedStateFromProps()`
+`willRender()`|`render()`
+`didInsertElemenet()`|`componentDidMount()`
+`didUpdateAttrs()`|`getDerivedStateFromProps()` & `componentDidUpdate()`
+`willDestroyElement()`|`componentWillUnmount()`
+
+---
 ### Search Form Component
 
 <p><img src="./search-screenshot.png" /></p>
@@ -324,4 +336,4 @@ npm install --save some-package
   ]}
 />
 ---
-# The end
+# Questions?
