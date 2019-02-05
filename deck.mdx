@@ -140,35 +140,50 @@ Owner|Facebook|Zeit (Now)|Gatsby.com
 ---
 ### Ember
 
-Routes do everything
+_Routes_ drive the application
 ---
+Plan application in **routes**
 ```
-datasets
-├── dataset
-│   ├── data
-│   │   ├── controller.js
-│   │   ├── route.js
-│   │   └── template.hbs
-│   ├── overview
-│   │   ├── controller.js
-│   │   ├── route.js
-│   │   └── template.hbs
-│   ├── controller.js
-│   ├── route.js
-│   └── template.hbs
-├── index
-│   ├── controller.js
-│   ├── route.js
-│   └── template.hbs
-├── index-loading
-│   └── template.hbs
-├── controller.js
-└── template.hbs
+/application
+  route
+  template
+  /index
+    controller
+    template
+  /items
+    route
+    controller
+    template
+```
+```notes
+/application
+  route - set locale, rehydrate session
+  template - show nav menu w/ user sign in/out
+  /index
+    controller - transition to items on search
+    template - show search form
+  /items 
+    route - parse query params
+    controller - respond to user paging/searching
+    template - show search results
+```
+---
+Encapsulate and reuse view state w/ **components**
+```
+{{item-pager}} - show/update the current page of item results
+{{ago-search}} - reusable search form
+{{extents-map}} - map lazy-loads resources
+```
+---
+For cross-cutting concerns use **services**:
+```
+session - fetch, persist, and provide user auth & info
+items - execute items search (depends on session)
 ```
 ---
 ### React
 
-Everything is a component
+<small style={{color: 'grey'}}>(almost)</small> Everything is a component
 ---
 Ember|React
 --|--
@@ -178,10 +193,41 @@ Controller|Component
 Template|Component
 Component|Component
 Helper|Component
-Ember Data|GraphQL
 Service|Redux or Context
 Util|ES Module
+Ember Data|GraphQL
 Initializer|index.js
+---
+Plan application in **components**
+```
+index.js
+<Router>
+  <App>
+    <AppNav>
+    <Route match="/">
+      <Home>
+    <Route match="/items">
+      <Items>
+        <ItemsLayout>
+```
+```notes
+index.js - set locale, rehydrate session
+<Router>
+  <App> - fetch, persist, and provide user auth & info
+    <AppNav> - show nav menu w/ user sign in/out
+    <Route match="/">
+      <Home> - show search form & transition to items on search
+    <Route match="/items">
+      <Items> - parse query params & execute items search
+        <ItemsLayout> - show search results & respond to user paging/searching
+```
+---
+_Reusable_ components encapsulate and reuse view state
+```
+<ItemPager> - show/update the current page of item results
+<AgoSearch> - reusable search form
+<ExtentsMap> - map lazy-loads resources
+```
 ---
 ## Templates vs JSX
 ---
