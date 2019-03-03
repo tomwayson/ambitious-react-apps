@@ -7,6 +7,8 @@
     "start": "mdx-deck deck.mdx",
     "build": "mdx-deck build deck.mdx",
     "export": "mdx-deck pdf --out-file=ambitious-react-apps.pdf deck.mdx",
+    "predeploy": "npm run export && rm -rf dist/TEMP",
+    "deploy": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -17,10 +19,11 @@
   "author": "Tom Wayson <tom@tomwayson.com> (https://tomwayson.com)",
   "license": "Apache-2.0",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/tomwayson/ambitious-react-apps.git"
+    "type": "git",
+    "url": "https://github.com/tomwayson/ambitious-react-apps.git"
   },
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "mdx-deck": "^1.8.2"
   },
   "dependencies": {
