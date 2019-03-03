@@ -1,20 +1,25 @@
 {
-  "name": "react-for-ember-devs",
+  "name": "ambitious-react-apps",
   "version": "1.0.0",
-  "description": "React for Ember Developers",
+  "description": "How Ember developers can build ambitious ArcGIS apps with React",
   "main": "deck.mdx",
   "scripts": {
     "start": "mdx-deck deck.mdx",
     "build": "mdx-deck build deck.mdx",
-    "export": "mdx-deck pdf --out-file=react-for-ember-devs.pdf deck.mdx",
+    "export": "mdx-deck pdf --out-file=ambitious-react-apps.pdf deck.mdx",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "React",
+    "ArcGIS",
     "Ember"
   ],
   "author": "Tom Wayson <tom@tomwayson.com> (https://tomwayson.com)",
   "license": "Apache-2.0",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/tomwayson/ambitious-react-apps.git"
+  },
   "devDependencies": {
     "mdx-deck": "^1.8.2"
   },
